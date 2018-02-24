@@ -137,7 +137,11 @@ const AndroidChromeOpts = {
     // app: 'path/to/app'
 };
 
-describe('demo.test.js', function(){
+describe('demo.test.js', function() {
+    
+  // 设定测试时间
+  this.timeout(5 * 60 * 1000)
+  
   // 测试前的初始化操作
   before(function() {
     return driver.init(pcOpts);
@@ -243,51 +247,58 @@ module.exports = (wd, isIOS) => {
 
 ### 4 macaca 测试环境配置完整过程
 
-#### 4.1 安装依赖环境并检查
+#### 4.1 安装环境、工具包和驱动
 
+按照官方文档安装好环境后，执行：
 ```bash
+# 全局安装
 npm i macaca-cli -g
+
+# 桌面端chrome浏览器测试
+# 必须安装：macaca-wd Web Driver驱动、chai 断言库（也可选择其他，例如should）
+npm i --save-dev mocha macaca-cli macaca-wd macaca-reporter macaca-chrome chai
+
+# 移动端测试：iOS
+npm i --save-dev mocha macaca-cli macaca-wd macaca-ios macaca-reporter chai
+
+# 移动端测试：Android
+npm i --save-dev mocha macaca-cli macaca-wd macaca-android macaca-reporter chai
+
 ```
 参考链接：https://macacajs.github.io/zh/environment-setup
 
 * **注意：**  
 1. 全局安装不要用sudo命令，推荐使用nvm安装node，可将node和npm安装到用户目录下（若安装在系统目录下，会导致测试脚本运行失败！）
 2. Java环境只支持Java 1.8，不支持Java 9
-3. 不同移动平台测试需要安装对应驱动：
-
-|平台|驱动名称|
-|---|---|
-|iOS|`macaca-ios`|
-|Android|`macaca-android`|
+3. 不同移动平台测试需要安装对应驱动，否则无法运行测试用例！
 
 * **配置环境样例：**
 
-```json
+```
 // package.json
-"devDependencies": {
-    "blink-diff": "^1.0.13",
-    "detect-port": "^1.1.4",
-    "macaca-cli": "^2.0.13",
-    "macaca-reporter": "^1.0.10",
-    "macaca-simple-reportor": "^1.0.0",
-    "macaca-utils": "*",
-    "macaca-wd": "^1.0.17",
-    "mocha": "^4.1.0",
-    "opn": "^5.1.0",
-    "should": "^13.1.3",
-    "webdriver-keycode": "^1.0.2",
+
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "macaca-android": "^2.0.46",
     "macaca-chrome": "^1.0.7",
-    "macaca-ios": "^2.0.30"
+    "macaca-cli": "^2.1.0",
+    "macaca-ios": "^2.0.30",
+    "macaca-reporter": "^1.0.52",
+    "macaca-wd": "^1.0.19",
+    "mocha": "^5.0.1"
+  },
+  "dependencies": {
+    "opn": "^5.2.0",
+    "path": "^0.12.7"
   }
 ```
 
-#### 4.2
+#### 4.2 检查环境配置
+```
+macaca doctor
+```
 
-#### 4.3
+#### 4.3 开始测试
 
-#### 4.4
-
-#### 4.5
-
-
+运行自定义命令即可开始测试，建议多多检查依赖环境以及是否sudo安装了依赖
 
