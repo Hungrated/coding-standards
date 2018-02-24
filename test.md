@@ -168,6 +168,14 @@ describe('demo.test.js', function(){
         .get(initialURL)
         .sleep(3000);
     });
+    
+    it('#2 should ...'/* 测试用例名称 */, function() {
+          // 测试用例内容
+          const initialURL = 'http://localhost:9001';
+          return driver
+            .get(initialURL)
+            .sleep(3000);
+        });
   });
 });
 ```
@@ -212,7 +220,24 @@ module.exports = (wd, isIOS) => {
 }
 ```
 
-##### 1
+#### 3 macaca 测试用例常用API
 
+|序号|名称|描述|
+|---|---|---|
+|1|`get(url) → { Promise.<string> }`|导航到一个新的网址|
+|2|`elementById(value) → { Promise.<Element> }`|从根结点搜索获取id为指定值的元素|
+|3|`sleep(ms) → { Promise }`|阻塞（等待）指定毫秒数|
+|4|`click() → { Promise }`|点击一个元素|
+|5|`close() → { Promise.<string> }`|关闭窗口|
+|6|`context(contextRef) → { Promise }`|上下文|
+|7|`allCookies() → { Promise.<string> }`|获取所有cookies内容|
+|8|`back() → { Promise.<string> }`|导航到上一页|
+|9|`clear() → { Promise.<string> }`|清空input或textarea元素的内容|
+|10|`getComputedCss(propertyName) → { Promise.<string> }`|获取计算后的css|
+|11|`getProperty(name) → { Promise.<string> }`|获取一个元素的参数|
+|12|`execute(code[, args]) → { Promise.<string> }`|插入JS片段以执行|
+|13|`frame(frameRef) → { Promise.<string> }`|变换焦点 frameRef为目标元素的id或name|
+|14|`hasElementById(value) → { Promise.<boolean> }`|是否存在名为id的元素|
+|15|`keys(keys) → { Promise }`|向页面发送键盘按键|
 
 参考资料：https://macacajs.github.io/macaca-wd/
