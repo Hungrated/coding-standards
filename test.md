@@ -3,9 +3,8 @@
 > 此篇规范说明针对 `alibaba/macaca` 编写  
 > `macaca` 是基于 `mocha` 的多端测试工具，断言库选择 `chai.expect`
 
-### 综述
 
-#### 1 mocha相关
+### 1 mocha相关
 
 **1.1 测试脚本的写法**  
 
@@ -98,7 +97,7 @@ it.skip('#1(2) should ...', function() {
 });
 ```
 
-#### 2 macaca测试脚本模板
+### 2 macaca测试脚本模板
 
 ```javascript
 // 引入官方 webdriver client 包
@@ -220,7 +219,7 @@ module.exports = (wd, isIOS) => {
 }
 ```
 
-#### 3 macaca 测试用例常用API
+### 3 macaca 测试用例常用API
 
 |序号|名称|描述|
 |---|---|---|
@@ -241,3 +240,54 @@ module.exports = (wd, isIOS) => {
 |15|`keys(keys) → { Promise }`|向页面发送键盘按键|
 
 参考资料：https://macacajs.github.io/macaca-wd/
+
+### 4 macaca 测试环境配置完整过程
+
+#### 4.1 安装依赖环境并检查
+
+```bash
+npm i macaca-cli -g
+```
+参考链接：https://macacajs.github.io/zh/environment-setup
+
+* **注意：**  
+1. 全局安装不要用sudo命令，推荐使用nvm安装node，可将node和npm安装到用户目录下（若安装在系统目录下，会导致测试脚本运行失败！）
+2. Java环境只支持Java 1.8，不支持Java 9
+3. 不同移动平台测试需要安装对应驱动：
+
+|平台|驱动名称|
+|---|---|
+|iOS|`macaca-ios`|
+|Android|`macaca-android`|
+
+* **配置环境样例：**
+
+```json
+// package.json
+"devDependencies": {
+    "blink-diff": "^1.0.13",
+    "detect-port": "^1.1.4",
+    "macaca-cli": "^2.0.13",
+    "macaca-reporter": "^1.0.10",
+    "macaca-simple-reportor": "^1.0.0",
+    "macaca-utils": "*",
+    "macaca-wd": "^1.0.17",
+    "mocha": "^4.1.0",
+    "opn": "^5.1.0",
+    "should": "^13.1.3",
+    "webdriver-keycode": "^1.0.2",
+    "macaca-chrome": "^1.0.7",
+    "macaca-ios": "^2.0.30"
+  }
+```
+
+#### 4.2
+
+#### 4.3
+
+#### 4.4
+
+#### 4.5
+
+
+
