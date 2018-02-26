@@ -312,6 +312,3 @@ sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode�
 
 * `@@iterator` 属性和 `values()` 属性的初始值均为同一个函数对象（`arr[Symbol.iterator]()`）。
 
-
-
-
