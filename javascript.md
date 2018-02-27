@@ -312,3 +312,122 @@ sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode�
 
 * `@@iterator` 属性和 `values()` 属性的初始值均为同一个函数对象（`arr[Symbol.iterator]()`）。
 
+#### 2.2 `String` 字符串对象
+
+##### 2.2.1 `String.prototype.charAt(index)` | 返回指定字符 | `不改变原字符串`
+
+##### 2.2.2 `String.prototype.concat(string2[, string3[, ..., stringN]])` | 返回指定字符 | `不改变原字符串`
+
+* `concat()` 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
+
+##### 2.2.3 `String.prototype.includes(searchString[, position])` | 判断包含 | `ES6`
+
+* `includes()` 方法用于判断一个字符串是否包含在另一个字符串中，根据情况返回 `true` 或 `false` 。
+
+##### 2.2.4 `String.prototype.indexOf(searchValue[, fromIndex])` | 返回指定索引 | `不改变原字符串`
+
+* `indexOf()` 方法返回调用 `String` 对象中第一次出现的指定值的索引，开始在 fromIndex进行搜索。如果未找到该值，则返回-1。
+
+##### 2.2.5 `String.prototype.lastIndexOf(searchValue[, fromIndex])` | 返回指定索引 | `不改变原字符串`
+
+* `lastIndexOf()` 方法返回指定值在调用该方法的字符串中最后出现的位置，如果没找到则返回 -1。
+从该字符串的后面向前查找，从 fromIndex 处开始。
+
+##### 2.2.6 `String.prototype.localeCompare(compareString[, locales[, options]])` | 比较字符串 | `ES6`
+
+* `localeCompare()` 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。
+新的 `locales` 、 `options` 参数能让应用程序定制函数的行为即指定用来排序的语言。
+`locales` 和 `options` 参数是依赖于具体实现的，在旧的实现中这两个参数是完全被忽略的。
+
+##### 2.2.7 `String.prototype.match(regexp)` | 返回匹配字符 | `不改变原字符串`
+
+* 当一个字符串与一个正则表达式匹配时， `match()` 方法检索匹配项。
+
+* 如果正则表达式不包含 `g` 标志，则 `str.match()` 会返回和 `RegExp.exec()` 相同的结果。
+而且返回的 `Array` 拥有一个额外的 `input` 属性，该属性包含被解析的原始字符串。
+另外，还拥有一个 `index` 属性，该属性表示匹配结果在原字符串中的索引（以0开始）。
+  
+* 如果正则表达式包含 `g` 标志，则该方法返回一个 `Array` ，它包含所有匹配的子字符串而不是匹配对象。
+捕获组不会被返回(即不返回index属性和input属性)。如果没有匹配到，则返回 `null` 。
+
+##### 2.2.8 `String.prototype.normalize([form = 'NFC'])` | 正规化字符串 | `ES6`
+
+* `normalize()` 方法会按照指定的一种 Unicode 正规形式将当前字符串正规化。
+
+##### 2.2.9 `String.prototype.padStart(targetLength [, padString])` | 首部填充字符 | `ES8` `改变原字符串`
+
+* `padStart()` 方法用另一个字符串填充当前字符串(重复，如果需要的话)，以便产生的字符串达到给定的长度。
+填充从当前字符串的开始(左侧)应用的。
+
+##### 2.2.10 `String.prototype.padEnd(targetLength [, padString])` | 尾部填充字符 | `ES8` `改变原字符串`
+
+* `padEnd()` 方法会用一个字符串填充当前字符串（如果需要的话则重复填充），返回填充后达到指定长度的字符串。
+从当前字符串的末尾（右侧）开始填充。
+
+##### 2.2.11 `String.prototype.repeat(count)` | 复制字符串 | `ES6` `不改变原字符串`
+
+* `repeat()` 构造并返回一个新字符串，该字符串包含被连接在一起的指定数量的字符串的副本。
+
+##### 2.2.12 `String.prototype.replace(regexp|substr, newSubStr|function)` | 匹配并替换字符串 | `不改变原字符串`
+
+* `replace()` 方法返回一个由替换值替换一些或所有匹配的模式后的新字符串。
+模式可以是一个字符串或者一个正则表达式, 替换值可以是一个字符串或者一个每次匹配都要调用的函数。
+
+* 注意：原字符串不会改变。
+
+##### 2.2.13 `String.prototype.search(regexp)` | 搜索正则匹配 | `不改变原字符串`
+
+* `search()` 方法执行正则表达式和 `String` 对象之间的一个搜索匹配。
+
+##### 2.2.14 `String.prototype.slice(beginSlice[, endSlice])` | 截取字符串 | `不改变原字符串`
+
+* `slice()` 方法提取一个字符串的一部分，并返回一新的字符串。
+
+##### 2.2.15 `String.prototype.split([separator[, limit]])` | 分割为字符串数组 | `不改变原字符串`
+
+* `split()` 方法使用指定的分隔符字符串将一个 `String` 对象分割成字符串数组，以将字符串分隔为子字符串，以确定每个拆分的位置。
+
+* 如果空字符串("")被用作分隔符，则字符串会在每个字符之间分割。
+
+* 当字符串为空时，`split()` 返回一个包含一个空字符串的数组，而不是一个空数组，如果字符串和分隔符都是空字符串，则返回一个空数组。
+
+##### 2.2.16 `String.prototype.startsWith(searchString [, position])` | 判断以指定字符串为首 | `ES6`
+
+* `startsWith()` 方法用来判断当前字符串是否是以另外一个给定的子字符串“开头”的，根据判断结果返回 `true` 或 `false`。
+
+##### 2.2.17 `String.prototype.endsWith(searchString [, position])` | 判断以指定字符串为尾 | `ES6`
+
+* `endsWith()` 方法用来判断当前字符串是否是以另外一个给定的子字符串“结尾”的，根据判断结果返回 `true` 或 `false`。
+
+##### 2.2.18 `String.prototype.substr(start[, length])` | 返回指定字符 | `不改变原字符串`
+
+* `substr()` 方法返回一个字符串中从指定位置开始到指定字符数的字符。
+
+##### 2.2.19 `String.prototype.substring(indexStart[, indexEnd])` | 返回指定字符 | `不改变原字符串`
+
+* `substring()` 方法返回一个字符串在开始索引到结束索引之间的一个子集, 或从开始索引直到字符串的末尾的一个子集。
+
+##### 2.2.20 `String.prototype.toLowerCase()` | 改为全小写 | `不改变原字符串`
+
+* `toLowerCase()` 会将调用该方法的字符串值转为小写形式，并返回。
+
+##### 2.2.21 `String.prototype.toLowerCase()` | 改为全大写 | `不改变原字符串`
+
+* `toUpperCase()` 会将调用该方法的字符串值转为大写形式，并返回。
+
+##### 2.2.22 `String.prototype.toString()` | 返回指定对象字符串形式 | `不改变原字符串`
+
+##### 2.2.23 `String.prototype.trim()` | 删除两端空白字符 | `ES5` `改变原字符串`
+
+* `trim()` 方法会从一个字符串的两端删除空白字符。在这个上下文中的空白字符是所有的空白字符
+ (space, tab, no-break space 等) 以及所有行终止符字符（如 LF，CR）。
+
+##### 2.2.24 `String.prototype[@@iterator]()` | 迭代器 | `ES6`
+
+* `[@@iterator]()` 方法返回一个新的Iterator对象，它遍历字符串的代码点，返回每一个代码点的字符串值。
+
+##### 2.2.25 ``String.raw `templateString` `` | 返回字符串原始字面量 | `ES6`
+
+* `String.raw()` 是一个模板字符串的标签函数，它的作用类似于 Python 中的
+字符串前缀 r 和 C# 中的字符串前缀 @，是用来获取一个模板字符串的原始字面量值的。
+
