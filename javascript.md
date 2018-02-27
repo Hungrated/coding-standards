@@ -314,9 +314,11 @@ sort 排序不一定是稳定的。默认排序顺序是根据字符串Unicode�
 
 #### 2.2 `String` 字符串对象
 
+String 全局对象是一个用于字符串或一个字符序列的构造函数。
+
 ##### 2.2.1 `String.prototype.charAt(index)` | 返回指定字符 | `不改变原字符串`
 
-##### 2.2.2 `String.prototype.concat(string2[, string3[, ..., stringN]])` | 返回指定字符 | `不改变原字符串`
+##### 2.2.2 `String.prototype.concat(string2[, string3[, ..., stringN]])` | 连接字符串 | `不改变原字符串`
 
 * `concat()` 方法将一个或多个字符串与原字符串连接合并，形成一个新的字符串并返回。
 
