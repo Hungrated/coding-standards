@@ -433,3 +433,46 @@ String 全局对象是一个用于字符串或一个字符序列的构造函数�
 * `String.raw()` 是一个模板字符串的标签函数，它的作用类似于 Python 中的
 字符串前缀 r 和 C# 中的字符串前缀 @，是用来获取一个模板字符串的原始字面量值的。
 
+#### 2.3 `Number` 数字对象
+
+##### 2.3.1 `Number.isFinite(value)` | 是否有穷数
+
+* `value` 只有数值类型的值，且是有穷的（finite），才返回 true。
+
+##### 2.3.2 `Number.isInteger(value)` | 是否整数
+
+* 注意 `NaN` 和正负 `Infinity` 不是整数。
+
+##### 2.3.3 `Number.isNaN(value)` | 是否非数字
+
+* 在 JavaScript 中，`NaN` 最特殊的地方就是，我们不能使用相等运算符（ `==` 和 `===` ）来判断一个值是否是  `NaN`，因为 `NaN == NaN` 和 `NaN === NaN` 都会返回 `false`。因此，必须要有一个判断值是否是 `NaN` 的方法。
+  
+* 和全局函数 `isNaN()` 相比，该方法不会强制将参数转换成数字，只有在参数是真正的数字类型，且值为 `NaN` 的时候才会返回 `true`。
+
+##### 2.3.4 `Number.parseFloat(string)` | 转换为浮点数 | `ES6`
+
+* `Number.parseFloat()` 方法可以把一个字符串解析成浮点数。该方法与全局的 `parseFloat()` 函数相同，并且处于 ECMAScript 6 规范中（用于全局变量的模块化）。
+
+##### 2.3.5 `Number.parseInt(string[, radix])` | 转换为整数 | `ES6`
+
+* `Number.parseInt()` 方法可以根据给定的进制数把一个字符串解析成整数。可选择进制。
+
+##### 2.3.6 `Number.prototype.toExponential(fractionDigits)` | 指数表示法
+
+* `toExponential(` 方法以指数表示法返回该数值字符串表示形式。
+
+##### 2.3.7 `Number.prototype.toFixed(digits)` | 定点表示法
+
+* `toFixed()` 方法使用定点表示法来格式化一个数。
+
+##### 2.3.8 `Number.prototype.toPrecision(precision)` | 有效数字表示
+
+* `toPrecision()` 方法以指定的精度返回该数值对象的字符串表示。
+
+##### 2.3.9 `Number.prototype.toString([radix])` | 转换成字符串
+
+#### 2.4 `Date` 日期对象
+
+##### 2.4.1 `Date.now()` | 转换成字符串 | `ES5`
+
+* `Date.now()` 方法返回自1970年1月1日 00:00:00 UTC到当前时间的毫秒数。
