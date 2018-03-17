@@ -473,6 +473,46 @@ String 全局对象是一个用于字符串或一个字符序列的构造函数�
 
 #### 2.4 `Date` 日期对象
 
-##### 2.4.1 `Date.now()` | 转换成字符串 | `ES5`
+参考：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 
-* `Date.now()` 方法返回自1970年1月1日 00:00:00 UTC到当前时间的毫秒数。
+#### 2.5 `Math` 数学对象
+
+参考：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
