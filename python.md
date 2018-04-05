@@ -224,3 +224,11 @@ if not len(seq)
 
 * 二进制数据判断使用 if boolvalue的方式。
 
+
+### 3 实现Node.js与Python脚本语言混编
+
+实现原理非常简单，使用Node.js的 `child_process` 这个模块其实是帮助开发者在Node.js环境中建立一个子进程。然后在这个子进程中使用系统命令行运行python脚本，如 `python test_py.py arg0 
+arg1` 实现对python脚本的调用。
+
+
+
