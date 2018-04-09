@@ -11,7 +11,11 @@ initial commit on Jan 23rd 2018
 
 * [Regexp](./regexp.md)
 
+* [CSS](./css.md)
+
 * [Sass](./sass.md)
+
+* [Python](./python.md)
 
 * [API](./api.md)
 
