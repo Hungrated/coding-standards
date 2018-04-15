@@ -260,15 +260,6 @@
 
 * 用法：先将左、中框设置为float:left、margin-right，再设置右框overflow:hidden，最后给左中框中的内容设置width。
 
-* 优点：
-
-* 缺点：
-
-
-
-
-
-#### 2.7
 
 参考资料：https://www.itcodemonkey.com/article/2848.html
 
