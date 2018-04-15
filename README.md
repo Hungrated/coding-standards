@@ -17,6 +17,8 @@ initial commit on Jan 23rd 2018
 
 * [Python](./python.md)
 
+* [Git](./git.md)
+
 * [API](./api.md)
 
 * [Test](./test.md)
