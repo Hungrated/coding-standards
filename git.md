@@ -2,7 +2,7 @@
 
 Git是目前世界上最先进的分布式版本控制系统。
 
-参考资料：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000
+**参考资料**：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001373962845513aefd77a99f4145f0a2c7a7ca057e7570000
 
 常用命令：
 
@@ -123,4 +123,4 @@ AoneFlow 的发布分支设计十分巧妙，可谓整个体系的精髓。GitFl
 ![](./img/git-03.png)
 
 
-参考资料：http://mp.weixin.qq.com/s/JsBX3UPgZL_HUOTCIopr_A
+**参考资料**：http://mp.weixin.qq.com/s/JsBX3UPgZL_HUOTCIopr_A

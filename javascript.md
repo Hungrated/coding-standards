@@ -551,4 +551,4 @@ MDN中有一节专门提到不要使用eval语句。
 
 > 只允许使用单引号包裹普通字符串，禁止使用双引号。如果字符串中包含单引号字符，应该使用模板字符串。
 
-参考资料：http://mp.weixin.qq.com/s/itTcxdyEYi0anUPBIRhYsw
+**参考资料**：http://mp.weixin.qq.com/s/itTcxdyEYi0anUPBIRhYsw

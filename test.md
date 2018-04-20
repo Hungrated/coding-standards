@@ -243,7 +243,7 @@ module.exports = (wd, isIOS) => {
 |14|`hasElementById(value) → { Promise.<boolean> }`|是否存在名为id的元素|
 |15|`keys(keys) → { Promise }`|向页面发送键盘按键|
 
-参考资料：https://macacajs.github.io/macaca-wd/
+**参考资料**：https://macacajs.github.io/macaca-wd/
 
 ### 4 macaca 测试环境配置完整过程
 
