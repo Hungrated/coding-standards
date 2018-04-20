@@ -122,5 +122,4 @@ AoneFlow 的发布分支设计十分巧妙，可谓整个体系的精髓。GitFl
 
 ![](./img/git-03.png)
 
-
 **参考资料**：http://mp.weixin.qq.com/s/JsBX3UPgZL_HUOTCIopr_A
