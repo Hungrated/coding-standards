@@ -6,8 +6,6 @@ Sass (Syntactically Awesome StyleSheets) 是一款强化 CSS 的辅助工具，�
   
 > 另一种也是最早的 Sass 语法格式，被称为缩进格式 (Indented Sass) 通常简称 "Sass"，是一种简化格式。它使用 “缩进” 代替 “花括号” 表示属性属于某个选择器，用 “换行” 代替 “分号” 分隔属性，很多人认为这样做比 SCSS 更容易阅读，书写也更快速。缩进格式也可以使用 Sass 的全部功能，只是与 SCSS 相比个别地方采取了不同的表达方式，具体请查看 the indented syntax reference。这种格式以 `.sass` 作为拓展名。
 
-
-
 ### 1 CSS功能拓展
 
 #### 1.1 嵌套规则
