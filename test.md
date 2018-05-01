@@ -93,3 +93,9 @@ it.skip('#1(2) should ...', function() {
   // 此方法指定被跳过，不会执行
 });
 ```
+
+### 2 前端自动化测试解决方案
+
+autotest-service: https://github.com/Hungrated/autotest-service
+
+autotest-client: https://github.com/Hungrated/autotest-client
